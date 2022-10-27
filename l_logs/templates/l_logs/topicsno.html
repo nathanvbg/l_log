@@ -1,0 +1,14 @@
+{% extends 'l_logs/base.html' %}
+
+{% block content %}
+
+<p>Topics that nobody cares about :</p>
+<ul>
+{% for topic in topicsno %}
+  <li>{{ topic }}</li>
+{% empty %}
+  <p>Nothing to show bitch</p>
+{% endfor %}
+</ul>
+
+{% endblock content %}

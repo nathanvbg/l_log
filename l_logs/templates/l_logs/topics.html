@@ -1,0 +1,17 @@
+{% extends "l_logs/base.html" %}
+
+{% block content %}
+
+<p>Topics</p>
+
+<ul>
+    {% for topic in topics %}
+      <li>
+        <a href="{% url 'l_logs:topic' topic.id %}">{{ topic }}</a>
+      </li>
+    {% empty %}
+      <li>No topic added yet.</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
